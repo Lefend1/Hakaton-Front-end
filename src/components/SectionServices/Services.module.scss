@@ -1,0 +1,45 @@
+.section__services {
+    margin: 40px 145px;
+
+    &>h1 {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 56px;
+        color: #000000;
+    }
+}
+
+.container__list {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+        position: relative;
+        border-radius: 35px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &>p {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 35px;
+            color: #FFFFFF;
+            max-width: 250px;
+        }
+    }
+}
+
+.img__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
