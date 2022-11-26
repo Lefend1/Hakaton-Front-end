@@ -4,18 +4,16 @@
     display: flex;
     justify-content: space-between;
     padding: 24px 64px;
-
     &>ul {
         display: flex;
         width: 100%;
         list-style: none;
         color: #8d8d8d;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
         align-items: center;
         text-transform: uppercase;
-        justify-content: end;
-
+        justify-content: flex-end;
         &>li {
             display: flex;
             margin-right: 24px;
@@ -25,8 +23,7 @@
 
 .header__logo {
     margin-right: 64px;
-
-    &>img {
+    &>a>img {
         width: 160px;
         height: 26px;
     }
@@ -41,7 +38,6 @@
     padding: 0 16px;
     border-radius: 8px;
     transition: border 0.3s ease;
-
     &:hover {
         border-color: #01000c;
     }
