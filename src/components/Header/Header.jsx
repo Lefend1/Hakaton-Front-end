@@ -52,7 +52,7 @@ const Header = () => {
                   <NavLink to="/vacancies">вакансии</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/news">Новости</NavLink>
+                  <NavLink to="/news/javascript">Новости</NavLink>
                 </li>
               </ul>
               <button onClick={() => setOpen(false)}>+</button>

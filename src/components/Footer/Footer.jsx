@@ -9,7 +9,7 @@ const Footer = () => {
           <Link to="/map/language/total">
             <h1>Языки</h1>
             <ul>
-              <li>Тепловая карты</li>
+              <li>Тепловая карта</li>
             </ul>
           </Link>
         </div>
