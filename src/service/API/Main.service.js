@@ -49,7 +49,7 @@ export default class MainService {
 
     static async getPost(tag) {
         try {
-            return $api.get("api/news", {
+            return $api.get("/api/news", {
                 params: {
                     tag: tag,
                 },

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 import NewsPost from "../../components/NewsPost/NewsPost";
 import Header from "../../components/Header/Header";
@@ -7,6 +7,7 @@ import styles from "./News.module.scss";
 import MainService from "../../service/API/Main.service";
 import getSortTag from "../../plugins/getSortTag";
 import service from "../../assets/service.json";
+import Footer from "../../components/Footer/Footer";
 
 const NewsPage = () => {
   const { tag } = useParams();
@@ -72,6 +73,7 @@ const NewsPage = () => {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

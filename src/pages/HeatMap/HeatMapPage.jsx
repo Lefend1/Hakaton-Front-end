@@ -11,6 +11,7 @@ import getColorCell from "../../plugins/getColorCell";
 import Header from "../../components/Header/Header";
 import styles from "./HeatMap.module.scss";
 import HeatMapChart from "../../components/Charts/HeatMapChart";
+import Footer from "../../components/Footer/Footer";
 
 const HeatMapPage = () => {
   const { time, variation } = useParams();
@@ -79,6 +80,7 @@ const HeatMapPage = () => {
           time={time}
         />
       </div>
+      <Footer />
     </>
   );
 };
