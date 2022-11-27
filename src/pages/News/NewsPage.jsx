@@ -12,6 +12,7 @@ const NewsPage = () => {
   const { tag } = useParams();
   const [post, setPost] = useState([]);
   const [tags, setTags] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     const getPosts = async () => {
       const responseTags = await MainService.getAllTop("total");
@@ -22,6 +23,7 @@ const NewsPage = () => {
         );
         setTags(resultTags);
       }
+      setIsLoading(true);
       var responsePosts = await MainService.getPost(tag);
       if (responsePosts?.data) {
         const colors = ["#F5EFB5", "#B5E6F5", "#D4FBD1", "#E4ECF8", "#E4ECF8"];
@@ -31,6 +33,7 @@ const NewsPage = () => {
         }
         console.log(responsePosts?.data[tag]);
         setPost(responsePosts?.data[tag]);
+        setIsLoading(false);
       }
     };
     getPosts();
@@ -53,7 +56,9 @@ const NewsPage = () => {
           </div>
         </div>
         <div className="">
-          {post.length > 0 &&
+          {isLoading ? (
+            <div class="loader">Loading...</div>
+          ) : (
             post.map((x) => (
               <NewsPost
                 title={x.title}
@@ -63,7 +68,8 @@ const NewsPage = () => {
                 url={x.url}
                 background={x.color}
               />
-            ))}
+            ))
+          )}
         </div>
       </div>
     </>
