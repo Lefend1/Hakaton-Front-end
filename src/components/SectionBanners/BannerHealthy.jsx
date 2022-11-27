@@ -9,7 +9,7 @@ const Banner = () => {
     >
       <div className={style.container}>
         <div className={style.banner__text}>
-          <div>
+          <div className={style.banner__content}>
             <h1>КОМУ ЭТО МОЖЕТ БЫТЬ ПОЛЕЗНО?</h1>
             <div className={style.list__text}>
               <ul>

@@ -6,7 +6,7 @@ const Banner = () => {
     <section className={style.section__banner}>
       <div className={style.container}>
         <div className={style.banner__text}>
-          <div>
+          <div className={style.banner__content}>
             <h1>УЗНАВАЙ НОВЫЕ ТРЕНДЫ В IT ВМЕСТЕ С ЦЕНТР-ИНВЕСТ</h1>
             <div className={style.list__text}>
               <ul>

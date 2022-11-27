@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__top}>
@@ -16,20 +19,40 @@ const Header = () => {
             <NavLink to="/map/language/total">языки</NavLink>
           </li>
           <li>
+            <NavLink to="/map/framework/total">фреймворки</NavLink>
+          </li>
+          <li>
             <NavLink to="/vacancies">вакансии</NavLink>
           </li>
-          <li>
-            <NavLink to="/123">помощь</NavLink>
-          </li>
-          <li>
+          {/* <li>
             <NavLink to="/123">о нас</NavLink>
-          </li>
-          <li>
-            <button className={styles.header__btn}>
-              <span>Интернет-банк</span>
-            </button>
-          </li>
+          </li> */}
         </ul>
+        <div className={styles.burger__menu}>
+          <div onClick={() => setOpen(true)}>
+            <svg viewBox="0 0 100 80" width="40" height="40">
+              <rect width="100" height="10"></rect>
+              <rect y="30" width="100" height="10"></rect>
+              <rect y="60" width="100" height="10"></rect>
+            </svg>
+          </div>
+          {open && (
+            <>
+              <ul onClick={() => setOpen(false)}>
+                <li>
+                  <NavLink to="/map/language/total">языки</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/map/framework/total">фреймворки</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/vacancies">вакансии</NavLink>
+                </li>
+              </ul>
+              <button onClick={() => setOpen(false)}>+</button>
+            </>
+          )}
+        </div>
       </div>
     </header>
   );

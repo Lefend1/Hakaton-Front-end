@@ -18,3 +18,16 @@
         }
     }
 }
+
+@media screen and (max-width: 885px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        display: flex;
+        text-align: center;
+        &>ul {
+            margin: 0 auto;
+        }
+    }
+}
