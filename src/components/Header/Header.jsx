@@ -24,6 +24,9 @@ const Header = () => {
           <li>
             <NavLink to="/vacancies">вакансии</NavLink>
           </li>
+          <li>
+            <NavLink to="/news/javascript">Новости</NavLink>
+          </li>
           {/* <li>
             <NavLink to="/123">о нас</NavLink>
           </li> */}
@@ -47,6 +50,9 @@ const Header = () => {
                 </li>
                 <li>
                   <NavLink to="/vacancies">вакансии</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/news">Новости</NavLink>
                 </li>
               </ul>
               <button onClick={() => setOpen(false)}>+</button>

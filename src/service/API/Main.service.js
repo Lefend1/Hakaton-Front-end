@@ -46,4 +46,16 @@ export default class MainService {
             console.log(e);
         }
     }
+
+    static async getPost(tag) {
+        try {
+            return $api.get("api/news", {
+                params: {
+                    tag: tag,
+                },
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
 }
